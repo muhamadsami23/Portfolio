@@ -6,13 +6,12 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-gray-500 text-sm">&copy; {currentYear} John Doe. All rights reserved.</p>
+              <p className="text-gray-500 text-sm"></p>
             </div>
   
             <div>
               <p className="text-gray-500 text-sm">
-                Designed and built with <span className="text-teal-400">❤</span>
-              </p>
+                              </p>
             </div>
           </div>
         </div>

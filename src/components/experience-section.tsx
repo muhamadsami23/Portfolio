@@ -6,53 +6,24 @@ import { Calendar, MapPin } from "lucide-react"
 interface Experience {
   title: string
   company: string
-  location: string
   period: string
-  description: string
-  responsibilities: string[]
+  achievements: string[]
+  link?: string
 }
 
 export default function ExperienceSection() {
   const experiences: Experience[] = [
     {
-      title: "Senior Frontend Developer",
-      company: "TechCorp Inc.",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      description: "Leading the frontend development team in building modern web applications using React and Next.js.",
-      responsibilities: [
-        "Architected and implemented the company's design system using React and Tailwind CSS",
-        "Improved application performance by 40% through code optimization and lazy loading",
-        "Mentored junior developers and conducted code reviews to ensure code quality",
-        "Collaborated with UX/UI designers to implement pixel-perfect interfaces",
+      title: "Business Development Executive",
+      company: "1Click",
+      period: "Sep 2021 - Nov 2022",
+      achievements: [
+        "Maintained a 4.9-star rating on the Freelancer.com profile, ensuring high client satisfaction.",
+        "Closed 30-50 new projects per month, consistently meeting or exceeding company targets.",
+        "Acquired up to 40% new clients monthly."
       ],
-    },
-    {
-      title: "Frontend Developer",
-      company: "WebSolutions Ltd.",
-      location: "London, UK",
-      period: "2020 - 2022",
-      description: "Developed responsive web applications and implemented UI/UX designs for various clients.",
-      responsibilities: [
-        "Built responsive web applications using React, Redux, and TypeScript",
-        "Implemented CI/CD pipelines using GitHub Actions for automated testing and deployment",
-        "Collaborated with backend developers to integrate RESTful APIs",
-        "Participated in agile development processes including daily stand-ups and sprint planning",
-      ],
-    },
-    {
-      title: "Junior Web Developer",
-      company: "Digital Creations",
-      location: "Berlin, Germany",
-      period: "2018 - 2020",
-      description: "Started as an intern and grew into a full-time role developing websites and web applications.",
-      responsibilities: [
-        "Developed and maintained websites using HTML, CSS, and JavaScript",
-        "Assisted in the migration of legacy applications to modern frameworks",
-        "Created responsive email templates for marketing campaigns",
-        "Collaborated with the design team to implement visual elements",
-      ],
-    },
+      link: "https://1click.com.pk/"
+    }
   ]
 
   return (
@@ -74,7 +45,6 @@ export default function ExperienceSection() {
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform md:translate-x-px"></div>
 
           <div className="space-y-12">
@@ -87,10 +57,9 @@ export default function ExperienceSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                {/* Timeline dot */}
                 <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 bg-teal-500 rounded-full transform -translate-x-1.5 md:-translate-x-2 mt-1.5"></div>
 
-                <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-12 ml-6 md:ml-0" : "md:pl-12 ml-6 md:ml-auto"}`}>
+                <div className="md:w-1/2 md:pr-12 ml-6 md:ml-0">
                   <div className="bg-zinc-800/50 p-6 rounded-lg border border-zinc-700 hover:border-teal-500/30 transition-colors">
                     <div className="flex flex-wrap justify-between items-start mb-4">
                       <h3 className="text-xl font-bold text-gray-200">{exp.title}</h3>
@@ -104,23 +73,24 @@ export default function ExperienceSection() {
                         <Calendar className="w-4 h-4 text-teal-400" />
                         <span>{exp.period}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4 text-teal-400" />
-                        <span>{exp.location}</span>
-                      </div>
                     </div>
 
-                    <p className="text-gray-400 mb-4">{exp.description}</p>
-
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Responsibilities:</h4>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Achievements:</h4>
                     <ul className="space-y-1">
-                      {exp.responsibilities.map((resp, i) => (
+                      {exp.achievements.map((ach, i) => (
                         <li key={i} className="flex items-start text-sm text-gray-400">
                           <span className="text-teal-400 mr-2">•</span>
-                          <span>{resp}</span>
+                          <span>{ach}</span>
                         </li>
                       ))}
                     </ul>
+                    {exp.link && (
+                      <div className="mt-4">
+                        <a href={exp.link} className="text-teal-400 hover:underline text-sm" target="_blank" rel="noopener noreferrer">
+                          Visit Company Website
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -131,4 +101,3 @@ export default function ExperienceSection() {
     </section>
   )
 }
-

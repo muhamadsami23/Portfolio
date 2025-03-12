@@ -24,17 +24,17 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-end gap-8">
           <a
-            href="/resume.pdf"
+            href="/M.Sami Resume (1).pdf"
             download
             className="flex items-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-teal-400 rounded-md text-sm transition-colors"
           >
             <FileDown className="w-4 h-4" />
-            Resume
+            Download Resume
           </a>
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/muhamadsami23"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-teal-400 transition-colors"
@@ -42,20 +42,12 @@ export default function Navbar() {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/muhammad-sami-48734b22a/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-teal-400 transition-colors"
             >
               <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-teal-400 transition-colors"
-            >
-              <Twitter className="w-5 h-5" />
             </a>
           </div>
         </div>

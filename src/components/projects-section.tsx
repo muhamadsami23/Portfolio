@@ -17,56 +17,23 @@ interface Project {
 export default function ProjectsSection() {
   const projects: Project[] = [
     {
-      id: "project1",
-      title: "X-Dividend Mobile App",
-      description:
-        "The app offers comprehensive data on companies, including categories of Most Actives, Gainers and Losers Stock Market. Users can sort the information by sector, name, highest or lowest price, dividend data, and ex-dividend date. This data is updated in real-time, ensuring that users always have access to the most current information.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mObpqrGsmVXowohyH7aPYeRztk33Cb.png",
-      technologies: ["React Native", "Hybrid Mobile App", "Android", "iOS"],
-      github: "https://github.com/johndoe/x-dividend",
-      demo: "https://x-dividend.example.com",
-      featured: true,
-    },
-    {
-      id: "project2",
-      title: "Interact Family Chat App",
-      description:
-        "Interact is a revolutionary mobile app designed to help families connect with other families and promote social interaction. With Interact, families can easily find and connect with other families in their local area, create events, and chat with family partners. The app uses geolocation features to show other families within a specific radius, making it easy to find and connect with like-minded families nearby.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mObpqrGsmVXowohyH7aPYeRztk33Cb.png",
-      technologies: ["React Native", "Hybrid Mobile App", "Android", "iOS"],
-      github: "https://github.com/johndoe/interact-family",
-      demo: "https://interact-family.example.com",
-      featured: true,
-    },
-    {
-      id: "project3",
-      title: "ShareIt: Share & Win",
-      description:
-        "ShareIt is an innovative mobile application that empowers users to share their stories and engage with a community of like-minded individuals. With its unique features, ShareIt allows users to purchase coins with in-app purchase features, making it easy and convenient for users to engage with the app's features.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mObpqrGsmVXowohyH7aPYeRztk33Cb.png",
-      technologies: ["React Native", "Hybrid Mobile App", "Android", "iOS"],
-      github: "https://github.com/johndoe/shareit",
-      demo: "https://shareit.example.com",
-      featured: true,
-    },
-    {
       id: "project4",
-      title: "System Monitor Dashboard",
+      title: "University's Academic Portal",
       description:
-        "A comprehensive system monitoring tool that provides real-time insights into system performance, memory usage, and process management. Built with low-level system APIs and optimized for minimal overhead.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["C++", "System APIs", "Qt", "Performance Optimization"],
-      github: "https://github.com/johndoe/system-monitor",
+        "A comprehensive system built for University to manage student's, teacher's and other faculty along with operations on the campus. Have three different modules for each, students, teachers and administration. Built using React Typescript, Node.js and MySQL.",
+      image: "/upm.png?height=400&width=600",
+      technologies: ["React", "Typescript", "Node.js", "MySQL"],
+      github: "https://github.com/muhamadsami23/University-Academic-Portal",
       featured: false,
     },
     {
       id: "project5",
-      title: "Database Query Optimizer",
+      title: "Autonomous Space Rover Navigator",
       description:
-        "An intelligent query optimization tool that analyzes and improves SQL queries for better performance. Uses advanced algorithms to suggest index improvements and query restructuring.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["Python", "SQL", "Algorithm Design", "Performance Analysis"],
-      github: "https://github.com/johndoe/query-optimizer",
+        "An intelligent autonomour rover, capable of capturing data and finding an optimal and obstacle free path on martian terrain. Uses advanced algorithms to navigate while maintain a track of the power usage.",
+      image: "/rover.png?height=400&width=600",
+      technologies: ["C", "C++", "Algorithm Design", "Unity"],
+      github: "https://github.com/muhamadsami23",
       featured: false,
       reverse: true,
     },

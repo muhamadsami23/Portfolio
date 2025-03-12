@@ -25,21 +25,20 @@ export default function HeroSection() {
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-400 mb-8">Software Developer</h2>
             <p className="text-gray-400 text-lg mb-10 max-w-2xl">
-            Crafting seamless digital experiences,blending logic with creativity to build solutions that are as efficient as they are elegant. Whether it's structuring complex systems or designing intuitive user interactions, I thrive on turning ideas into reality with precision and purpose.
+            Crafting seamless digital experiences, blending logic with creativity to build solutions that are as efficient as they are elegant. Whether it's structuring complex systems or designing intuitive user interactions, I thrive on turning ideas into reality with precision and purpose.
             </p>
-          
           </motion.div>
 
           <motion.div
-            className="md:w-2/5"
+            className="md:w-1/3"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative">
+            <div className="relative max-w-sm mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-purple-500/20 rounded-lg transform rotate-6"></div>
               <div className="relative bg-zinc-900 p-2 rounded-lg transform -rotate-3 border border-zinc-800 shadow-xl">
-                <img src="/155666362.jpeg?height=500&width=400" alt="Muhammad Sami" className="rounded w-full h-auto" />
+                <img src="/155666362.jpeg?height=400&width=320" alt="Muhammad Sami" className="rounded w-full h-auto" />
               </div>
             </div>
           </motion.div>
@@ -63,4 +62,3 @@ export default function HeroSection() {
     </section>
   )
 }
-

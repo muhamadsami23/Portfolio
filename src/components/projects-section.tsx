@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 interface Project {
   id: string
@@ -17,24 +18,25 @@ interface Project {
 export default function ProjectsSection() {
   const projects: Project[] = [
     {
-      id: "project4",
+      id: "project1",
       title: "University's Academic Portal",
       description:
-        "A comprehensive system built for University to manage student's, teacher's and other faculty along with operations on the campus. Have three different modules for each, students, teachers and administration. Built using React Typescript, Node.js and MySQL.",
-      image: "/upm.png?height=400&width=600",
-      technologies: ["React", "Typescript", "Node.js", "MySQL"],
-      github: "https://github.com/muhamadsami23/University-Academic-Portal",
-      featured: false,
+        "A comprehensive system built for University to manage students, teachers and other staff. It comes with features like attendance, results, fee management, library management, and more.",
+      image: "/placeholder.svg?height=400&width=600",
+      technologies: ["React", "Node.js", "MySQL", "TypeScript"],
+      github: "https://github.com/muhamadsami23/academic-portal",
+      demo: "https://academic-portal.example.com",
+      featured: true,
     },
     {
-      id: "project5",
+      id: "project2",
       title: "Autonomous Space Rover Navigator",
       description:
-        "An intelligent autonomour rover, capable of capturing data and finding an optimal and obstacle free path on martian terrain. Uses advanced algorithms to navigate while maintain a track of the power usage.",
-      image: "/rover.png?height=400&width=600",
-      technologies: ["C", "C++", "Algorithm Design", "Unity"],
-      github: "https://github.com/muhamadsami23",
-      featured: false,
+        "An intelligent autonomous rover, capable of detecting obstacles and finding an optimal path or terrain terrain. Uses computer vision and machine learning to navigate in a simulated Mars environment.",
+      image: "/placeholder.svg?height=400&width=600",
+      technologies: ["Python", "OpenCV", "Machine Learning", "Raspberry Pi"],
+      github: "https://github.com/muhamadsami23/space-rover",
+      featured: true,
       reverse: true,
     },
   ]
@@ -57,143 +59,97 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
 
-        {/* Mobile App Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {projects
-            .filter((p) => p.featured)
-            .map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 hover:border-teal-500/30 transition-colors"
+        {/* Featured Projects with Alternating Layout */}
+        <div className="space-y-20 mb-16">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div
+                className={`flex flex-col ${
+                  project.reverse ? "md:flex-row-reverse" : "md:flex-row"
+                } items-center gap-8`}
               >
-                <div className="h-64 overflow-hidden">
+                <div className="w-full md:w-1/2 relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-purple-500/20 transform rotate-3"></div>
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                    className="relative w-full h-[300px] object-cover rounded-lg transform -rotate-3"
                   />
                 </div>
 
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-bold text-teal-400">{project.title}</h3>
-                    <span className="text-xs text-gray-400 border border-zinc-700 rounded-full px-2 py-1">
-                      Featured Project
-                    </span>
-                  </div>
+                <div className="w-full md:w-1/2 relative z-10">
+                  <h3 className="text-3xl font-bold text-teal-400 mb-4 -mt-8 relative z-20 bg-zinc-950 w-fit px-4 py-2">
+                    {project.title}
+                  </h3>
 
-                  <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
+                  <div className="bg-zinc-900/90 backdrop-blur-sm p-6 rounded-lg border border-zinc-800 -ml-4 md:-ml-12 relative">
+                    <p className="text-gray-300 mb-4">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, i) => (
-                      <span key={i} className="text-xs bg-zinc-800 text-gray-300 px-2 py-1 rounded-md">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, i) => (
+                        <span key={i} className="text-xs bg-zinc-800 text-gray-300 px-2 py-1 rounded-md">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
 
-                  <div className="flex gap-3">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-teal-400 transition-colors"
-                      >
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-teal-400 transition-colors"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-        </div>
-
-        {/* Other Projects with Alternating Layout */}
-        <div className="space-y-20">
-          {projects
-            .filter((p) => !p.featured)
-            .map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div
-                  className={`flex flex-col ${project.reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-8`}
-                >
-                  <div className="w-full md:w-1/2 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-purple-500/20 transform rotate-3"></div>
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="relative w-full h-[300px] object-cover rounded-lg transform -rotate-3"
-                    />
-                  </div>
-
-                  <div className="w-full md:w-1/2 relative z-10">
-                    <h3 className="text-3xl font-bold text-teal-400 mb-4 -mt-8 relative z-20 bg-zinc-950 w-fit px-4 py-2">
-                      {project.title}
-                    </h3>
-
-                    <div className="bg-zinc-900/90 backdrop-blur-sm p-6 rounded-lg border border-zinc-800 -ml-4 md:-ml-12 relative">
-                      <p className="text-gray-300 mb-4">{project.description}</p>
-
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.map((tech, i) => (
-                          <span key={i} className="text-xs bg-zinc-800 text-gray-300 px-2 py-1 rounded-md">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-
-                      <div className="flex gap-3">
-                        {project.github && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-teal-400 transition-colors"
-                          >
-                            <Github className="w-5 h-5" />
-                          </a>
-                        )}
-                        {project.demo && (
-                          <a
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-teal-400 transition-colors"
-                          >
-                            <ExternalLink className="w-5 h-5" />
-                          </a>
-                        )}
-                      </div>
+                    <div className="flex gap-3">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-teal-400 transition-colors"
+                        >
+                          <Github className="w-5 h-5" />
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-teal-400 transition-colors"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* View All Projects Link */}
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <Link href="/projects" className="relative inline-flex group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-purple-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <button className="relative px-8 py-4 bg-zinc-900 rounded-lg leading-none flex items-center divide-x divide-gray-600">
+              <span className="flex items-center space-x-3">
+                <span className="pr-6 text-gray-100">View All Projects</span>
+              </span>
+              <span className="pl-6 text-teal-400 group-hover:text-gray-100 transition duration-200">
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </button>
+          </Link>
+        </motion.div>
       </div>
     </section>
   )
 }
-

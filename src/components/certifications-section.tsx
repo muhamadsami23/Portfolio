@@ -20,7 +20,16 @@ const certifications: Certification[] = [
     date: "2024",
     description:
       "Comprehensive introduction to Python programming, covering data structures, algorithms, and problem-solving techniques.",
-    link: "https://cs50.harvard.edu/python/",
+    link: "",
+  },
+  {
+    id: "googless",
+    title: "Google Soft Skills Program",
+    issuer: "PAFLA (Pakistan Freelancer Association, Powered by Google",
+    date: "2024",
+    description:
+      "Soft skills program, including Communication, Networking, Problem Solving and Management",
+    link: "",
   },
 ]
 

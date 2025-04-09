@@ -8,6 +8,8 @@ import ProjectsSection from "@/components/projects-section"
 import CertificationsSection from "@/components/certifications-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
+import ProjectsGallery from "@/components/project-gallery"
+
 
 export const metadata: Metadata = {
   title: "Muhammad Sami",

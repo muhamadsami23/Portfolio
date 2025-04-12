@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-end gap-8">
           <a
-            href="/M.Sami Resume (1).pdf"
+            href="https://certificates.cs50.io/a790dd75-1ad7-4a37-a13e-1df9d3322549.pdf?size=letter"
             download
             className="flex items-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-teal-400 rounded-md text-sm transition-colors"
           >

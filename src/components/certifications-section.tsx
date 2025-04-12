@@ -40,6 +40,7 @@ const achievements: Certification[] = [
     issuer: "KASBIT (Khadim Ali Shah Bukhari Institute of Technology)",
     date: "Apr 2024",
     description: "Developed an Autonomous Rover Navigator.",
+    link:"https://www.linkedin.com/posts/muhammad-sami-48734b22a_spacetech-hackathonwinners-fastnationaluniversity-activity-7182120503581556736-lCnz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADlcFOcBvJ3EdCf_FwiRigkwax-eFZRTE08"
   },
 ]
 
@@ -127,6 +128,16 @@ export default function CertificationsSection() {
                   <h3 className="text-lg font-bold text-gray-200">{ach.title}</h3>
                   <span className="text-sm text-teal-400">{ach.date}</span>
                   <p className="text-sm text-gray-400 mb-3">{ach.description}</p>
+                  {ach.link && (
+                    <a
+                      href={ach.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1 text-sm"
+                    >
+                      View Details <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

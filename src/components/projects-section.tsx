@@ -22,7 +22,7 @@ export default function ProjectsSection() {
       title: "University's Academic Portal",
       description:
         "A comprehensive system built for University to manage students, teachers and other staff. It comes with features like attendance, results, fee management, library management, and more.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/upm.png?height=400&width=600",
       technologies: ["React", "Node.js", "MySQL", "TypeScript"],
       github: "https://github.com/muhamadsami23/academic-portal",
       demo: "https://academic-portal.example.com",
@@ -33,8 +33,8 @@ export default function ProjectsSection() {
       title: "Autonomous Space Rover Navigator",
       description:
         "An intelligent autonomous rover, capable of detecting obstacles and finding an optimal path or terrain terrain. Uses computer vision and machine learning to navigate in a simulated Mars environment.",
-      image: "/placeholder.svg?height=400&width=600",
-      technologies: ["Python", "OpenCV", "Machine Learning", "Raspberry Pi"],
+      image: "/rover.png?height=400&width=600",
+      technologies: ["C++", "C", "Unity", "C#",'Data Structures'],
       github: "https://github.com/muhamadsami23/space-rover",
       featured: true,
       reverse: true,

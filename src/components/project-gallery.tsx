@@ -37,9 +37,9 @@ export default function ProjectsGallery() {
         "A comprehensive system built for University to manage students, teachers and other staff. It comes with features like attendance, results, fee management, library management, and more.",
       longDescription:
         "This academic portal revolutionizes how universities manage their administrative tasks. Built with a focus on user experience and efficiency, it provides separate interfaces for students, faculty, and administrative staff.\n\nKey features include real-time attendance tracking, grade management, course registration, fee payment processing, and comprehensive reporting tools. The system also includes a library management module with book tracking, reservations, and fine calculations.\n\nThe architecture follows a microservices approach, with separate services handling different aspects of the system, all communicating through a well-defined API. This ensures scalability and maintainability as the system grows.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/upm.png?height=300&width=500",
       category: "software",
-      technologies: ["React", "Node.js", "MySQL", "TypeScript", "Redux", "Express", "Docker", "AWS"],
+      technologies: ["React", "Node.js", "MySQL", "TypeScript"],
       github: "https://github.com/muhamadsami23/academic-portal",
       demo: "https://academic-portal.example.com",
       featured: true,
@@ -51,99 +51,99 @@ export default function ProjectsGallery() {
         "An intelligent autonomous rover, capable of detecting obstacles and finding an optimal path or terrain terrain. Uses computer vision and machine learning to navigate in a simulated Mars environment.",
       longDescription:
         "The Autonomous Space Rover Navigator is a cutting-edge project that combines robotics, computer vision, and machine learning to create a rover capable of navigating unknown terrains without human intervention.\n\nThe system uses a combination of sensors including LIDAR, stereo cameras, and infrared sensors to create a 3D map of the environment. A custom path-finding algorithm then determines the optimal route while avoiding obstacles and dangerous terrain.\n\nThe machine learning component allows the rover to improve its navigation capabilities over time by learning from previous experiences. It can identify different types of terrain and adjust its movement strategy accordingly.\n\nThe project was tested in a Mars-like environment simulation with various obstacles, slopes, and terrain types. The rover successfully navigated through 95% of the test scenarios without human intervention.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/rover.png?height=300&width=500",
       category: "software",
-      technologies: ["Python", "OpenCV", "Machine Learning", "Raspberry Pi", "TensorFlow", "ROS", "C++"],
+      technologies: ["C++", "C", "Unity", "C#",'Data Structures'],
       github: "https://github.com/muhamadsami23/space-rover",
       featured: true,
     },
-    {
-      id: "project3",
-      title: "E-Commerce Platform",
-      description:
-        "A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.",
-      longDescription:
-        "This e-commerce platform provides businesses with everything they need to set up and run an online store. The system includes comprehensive product management, inventory tracking, order processing, and customer management features.\n\nThe frontend is built with React and Redux, providing a smooth and responsive user experience. The backend uses Node.js with Express and MongoDB for data storage, with separate services handling authentication, product management, and order processing.\n\nKey features include a sophisticated product search with filtering and sorting options, a streamlined checkout process with multiple payment options (integrated with Stripe), order tracking, and a customer account system with order history and saved payment methods.\n\nThe platform also includes an admin dashboard for store owners to manage products, view analytics, process orders, and handle customer inquiries.",
-      image: "/placeholder.svg?height=300&width=500",
-      category: "software",
-      technologies: ["React", "Redux", "Node.js", "MongoDB", "Stripe API", "Express", "JWT", "AWS S3"],
-      github: "https://github.com/muhamadsami23/ecommerce-platform",
-      demo: "https://ecommerce-demo.example.com",
-    },
+    // {
+    //   id: "project3",
+    //   title: "E-Commerce Platform",
+    //   description:
+    //     "A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.",
+    //   longDescription:
+    //     "This e-commerce platform provides businesses with everything they need to set up and run an online store. The system includes comprehensive product management, inventory tracking, order processing, and customer management features.\n\nThe frontend is built with React and Redux, providing a smooth and responsive user experience. The backend uses Node.js with Express and MongoDB for data storage, with separate services handling authentication, product management, and order processing.\n\nKey features include a sophisticated product search with filtering and sorting options, a streamlined checkout process with multiple payment options (integrated with Stripe), order tracking, and a customer account system with order history and saved payment methods.\n\nThe platform also includes an admin dashboard for store owners to manage products, view analytics, process orders, and handle customer inquiries.",
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   category: "software",
+    //   technologies: ["React", "Redux", "Node.js", "MongoDB", "Stripe API", "Express", "JWT", "AWS S3"],
+    //   github: "https://github.com/muhamadsami23/ecommerce-platform",
+    //   demo: "https://ecommerce-demo.example.com",
+    // },
 
-    // Content Writing Projects
-    {
-      id: "project4",
-      title: "Technical Documentation Series",
-      description:
-        "A comprehensive series of technical documentation for a software product, including user guides, API documentation, and developer tutorials.",
-      longDescription:
-        "This technical documentation series was created for a complex enterprise software product to help users and developers understand and utilize the system effectively. The documentation is structured in a hierarchical manner, starting with high-level concepts and gradually diving into more detailed technical aspects.\n\nThe series includes:\n\n1. User Guides: Step-by-step instructions for end-users, with screenshots and examples for common tasks and workflows.\n\n2. Administrator Guides: Detailed documentation for system administrators, covering installation, configuration, security, and maintenance.\n\n3. API Documentation: Comprehensive documentation of all API endpoints, including request/response formats, authentication methods, error handling, and code examples in multiple programming languages.\n\n4. Developer Tutorials: A series of tutorials for developers looking to extend or integrate with the system, including sample projects and best practices.\n\nThe documentation was created using a docs-as-code approach, with all content stored in Markdown format in a Git repository, allowing for version control and collaborative editing. A custom documentation site was built using Docusaurus, with features like full-text search, versioning, and interactive API examples.",
-      image: "/placeholder.svg?height=300&width=500",
-      category: "content",
-      technologies: ["Technical Writing", "Markdown", "Documentation", "API Reference", "Docusaurus", "Git"],
-      demo: "https://docs.example.com",
-    },
-    {
-      id: "project5",
-      title: "Technology Blog Articles",
-      description:
-        "A collection of in-depth articles on emerging technologies, programming best practices, and industry trends.",
-      longDescription:
-        'This collection of technology blog articles covers a wide range of topics in the tech industry, from emerging technologies to programming best practices and industry trends. Each article is thoroughly researched and written to provide valuable insights to both technical and non-technical readers.\n\nThe articles are structured to be both educational and engaging, with a clear introduction, well-organized sections, and a conclusion that summarizes the key points. Code examples, diagrams, and illustrations are used where appropriate to enhance understanding.\n\nSome of the most popular articles in the collection include:\n\n1. "The Future of AI: Beyond Machine Learning" - An exploration of emerging AI technologies and their potential impact on various industries.\n\n2. "Clean Code Principles Every Developer Should Know" - A practical guide to writing maintainable and readable code, with examples in multiple programming languages.\n\n3. "Microservices vs. Monoliths: Choosing the Right Architecture" - An in-depth comparison of different architectural approaches, with case studies and decision frameworks.\n\n4. "The Developer\'s Guide to Cybersecurity" - An overview of security best practices for software developers, covering common vulnerabilities and how to prevent them.\n\nThe articles are optimized for search engines, with careful keyword research and on-page SEO techniques applied to ensure maximum visibility.',
-      image: "/placeholder.svg?height=300&width=500",
-      category: "content",
-      technologies: ["Content Writing", "SEO", "Research", "Technical Analysis", "WordPress", "Content Strategy"],
-      demo: "https://blog.example.com",
-    },
+    // // Content Writing Projects
+    // {
+    //   id: "project4",
+    //   title: "Technical Documentation Series",
+    //   description:
+    //     "A comprehensive series of technical documentation for a software product, including user guides, API documentation, and developer tutorials.",
+    //   longDescription:
+    //     "This technical documentation series was created for a complex enterprise software product to help users and developers understand and utilize the system effectively. The documentation is structured in a hierarchical manner, starting with high-level concepts and gradually diving into more detailed technical aspects.\n\nThe series includes:\n\n1. User Guides: Step-by-step instructions for end-users, with screenshots and examples for common tasks and workflows.\n\n2. Administrator Guides: Detailed documentation for system administrators, covering installation, configuration, security, and maintenance.\n\n3. API Documentation: Comprehensive documentation of all API endpoints, including request/response formats, authentication methods, error handling, and code examples in multiple programming languages.\n\n4. Developer Tutorials: A series of tutorials for developers looking to extend or integrate with the system, including sample projects and best practices.\n\nThe documentation was created using a docs-as-code approach, with all content stored in Markdown format in a Git repository, allowing for version control and collaborative editing. A custom documentation site was built using Docusaurus, with features like full-text search, versioning, and interactive API examples.",
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   category: "content",
+    //   technologies: ["Technical Writing", "Markdown", "Documentation", "API Reference", "Docusaurus", "Git"],
+    //   demo: "https://docs.example.com",
+    // },
+    // {
+    //   id: "project5",
+    //   title: "Technology Blog Articles",
+    //   description:
+    //     "A collection of in-depth articles on emerging technologies, programming best practices, and industry trends.",
+    //   longDescription:
+    //     'This collection of technology blog articles covers a wide range of topics in the tech industry, from emerging technologies to programming best practices and industry trends. Each article is thoroughly researched and written to provide valuable insights to both technical and non-technical readers.\n\nThe articles are structured to be both educational and engaging, with a clear introduction, well-organized sections, and a conclusion that summarizes the key points. Code examples, diagrams, and illustrations are used where appropriate to enhance understanding.\n\nSome of the most popular articles in the collection include:\n\n1. "The Future of AI: Beyond Machine Learning" - An exploration of emerging AI technologies and their potential impact on various industries.\n\n2. "Clean Code Principles Every Developer Should Know" - A practical guide to writing maintainable and readable code, with examples in multiple programming languages.\n\n3. "Microservices vs. Monoliths: Choosing the Right Architecture" - An in-depth comparison of different architectural approaches, with case studies and decision frameworks.\n\n4. "The Developer\'s Guide to Cybersecurity" - An overview of security best practices for software developers, covering common vulnerabilities and how to prevent them.\n\nThe articles are optimized for search engines, with careful keyword research and on-page SEO techniques applied to ensure maximum visibility.',
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   category: "content",
+    //   technologies: ["Content Writing", "SEO", "Research", "Technical Analysis", "WordPress", "Content Strategy"],
+    //   demo: "https://blog.example.com",
+    // },
 
-    // Design Projects
-    {
-      id: "project6",
-      title: "Brand Identity Package",
-      description:
-        "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
-      longDescription:
-        "This comprehensive brand identity package was created for a tech startup entering the competitive SaaS market. The project began with extensive research into the company's values, target audience, and competitors to ensure the brand identity would be distinctive and aligned with the company's vision.\n\nThe package includes:\n\n1. Logo Design: A modern, versatile logo with variations for different contexts (full color, monochrome, horizontal, vertical, and icon-only versions). The logo symbolizes innovation and reliability through its geometric design and color scheme.\n\n2. Color Palette: A carefully selected color palette with primary, secondary, and accent colors, along with guidelines for their usage in different contexts. The palette includes both digital color codes (HEX, RGB) and print color codes (CMYK, Pantone).\n\n3. Typography System: A selection of typefaces for headings, body text, and UI elements, with detailed guidelines for font sizes, weights, and spacing to ensure consistency across all materials.\n\n4. Brand Guidelines: A comprehensive document detailing how to use all brand elements correctly, including spacing requirements, do's and don'ts, and examples of the brand applied to various materials.\n\n5. Application Examples: Mockups showing the brand applied to business cards, letterheads, social media profiles, website, mobile app, and promotional materials.\n\nThe final brand identity successfully communicates the company's innovative approach while maintaining a professional and trustworthy appearance, helping them stand out in a crowded market.",
-      image: "/placeholder.svg?height=300&width=500",
-      category: "design",
-      technologies: [
-        "Brand Design",
-        "Logo Design",
-        "Typography",
-        "Color Theory",
-        "Adobe Illustrator",
-        "Adobe InDesign",
-      ],
-      demo: "https://behance.net/muhamadsami23",
-    },
-    {
-      id: "project7",
-      title: "UI/UX Design System",
-      description:
-        "A comprehensive design system with reusable components, style guides, and interaction patterns for a mobile application.",
-      longDescription:
-        "This UI/UX design system was created for a mobile application to ensure consistency, improve development efficiency, and provide a seamless user experience across the platform. The design system follows atomic design principles, organizing elements from the smallest building blocks to complex components and templates.\n\nThe design system includes:\n\n1. Foundation Elements: Color palette, typography, spacing, grid system, and iconography, all with detailed specifications and usage guidelines.\n\n2. Component Library: A comprehensive library of UI components including buttons, form elements, cards, navigation elements, and more. Each component is documented with variants, states, behavior, and code snippets.\n\n3. Interaction Patterns: Standardized patterns for common interactions such as navigation, form submission, error handling, and loading states, ensuring a consistent user experience throughout the application.\n\n4. Accessibility Guidelines: Detailed guidelines for ensuring all components meet WCAG 2.1 AA standards, including color contrast requirements, keyboard navigation, and screen reader support.\n\n5. Design Tokens: A system of design tokens that can be exported to different platforms, allowing for consistent implementation across web and mobile platforms.\n\nThe entire design system is maintained in Figma, with components organized into a master library that can be shared across multiple projects. The system includes documentation for both designers and developers, bridging the gap between design and implementation.",
-      image: "/placeholder.svg?height=300&width=500",
-      category: "design",
-      technologies: ["UI/UX Design", "Figma", "Interaction Design", "Prototyping", "Design Systems", "Accessibility"],
-      demo: "https://figma.com/@muhamadsami23",
-    },
+    // // Design Projects
+    // {
+    //   id: "project6",
+    //   title: "Brand Identity Package",
+    //   description:
+    //     "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
+    //   longDescription:
+    //     "This comprehensive brand identity package was created for a tech startup entering the competitive SaaS market. The project began with extensive research into the company's values, target audience, and competitors to ensure the brand identity would be distinctive and aligned with the company's vision.\n\nThe package includes:\n\n1. Logo Design: A modern, versatile logo with variations for different contexts (full color, monochrome, horizontal, vertical, and icon-only versions). The logo symbolizes innovation and reliability through its geometric design and color scheme.\n\n2. Color Palette: A carefully selected color palette with primary, secondary, and accent colors, along with guidelines for their usage in different contexts. The palette includes both digital color codes (HEX, RGB) and print color codes (CMYK, Pantone).\n\n3. Typography System: A selection of typefaces for headings, body text, and UI elements, with detailed guidelines for font sizes, weights, and spacing to ensure consistency across all materials.\n\n4. Brand Guidelines: A comprehensive document detailing how to use all brand elements correctly, including spacing requirements, do's and don'ts, and examples of the brand applied to various materials.\n\n5. Application Examples: Mockups showing the brand applied to business cards, letterheads, social media profiles, website, mobile app, and promotional materials.\n\nThe final brand identity successfully communicates the company's innovative approach while maintaining a professional and trustworthy appearance, helping them stand out in a crowded market.",
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   category: "design",
+    //   technologies: [
+    //     "Brand Design",
+    //     "Logo Design",
+    //     "Typography",
+    //     "Color Theory",
+    //     "Adobe Illustrator",
+    //     "Adobe InDesign",
+    //   ],
+    //   demo: "https://behance.net/muhamadsami23",
+    // },
+    // {
+    //   id: "project7",
+    //   title: "UI/UX Design System",
+    //   description:
+    //     "A comprehensive design system with reusable components, style guides, and interaction patterns for a mobile application.",
+    //   longDescription:
+    //     "This UI/UX design system was created for a mobile application to ensure consistency, improve development efficiency, and provide a seamless user experience across the platform. The design system follows atomic design principles, organizing elements from the smallest building blocks to complex components and templates.\n\nThe design system includes:\n\n1. Foundation Elements: Color palette, typography, spacing, grid system, and iconography, all with detailed specifications and usage guidelines.\n\n2. Component Library: A comprehensive library of UI components including buttons, form elements, cards, navigation elements, and more. Each component is documented with variants, states, behavior, and code snippets.\n\n3. Interaction Patterns: Standardized patterns for common interactions such as navigation, form submission, error handling, and loading states, ensuring a consistent user experience throughout the application.\n\n4. Accessibility Guidelines: Detailed guidelines for ensuring all components meet WCAG 2.1 AA standards, including color contrast requirements, keyboard navigation, and screen reader support.\n\n5. Design Tokens: A system of design tokens that can be exported to different platforms, allowing for consistent implementation across web and mobile platforms.\n\nThe entire design system is maintained in Figma, with components organized into a master library that can be shared across multiple projects. The system includes documentation for both designers and developers, bridging the gap between design and implementation.",
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   category: "design",
+    //   technologies: ["UI/UX Design", "Figma", "Interaction Design", "Prototyping", "Design Systems", "Accessibility"],
+    //   demo: "https://figma.com/@muhamadsami23",
+    // },
 
-    // Other Projects
-    {
-      id: "project8",
-      title: "Data Analysis Dashboard",
-      description:
-        "Interactive data visualization dashboard for business analytics with real-time data processing and customizable reports.",
-      longDescription:
-        "This data analysis dashboard provides business users with powerful tools to visualize and analyze complex data sets without requiring technical expertise. The dashboard combines real-time data processing with intuitive visualization tools to help users make data-driven decisions quickly.\n\nKey features include:\n\n1. Interactive Visualizations: A variety of chart types (line, bar, pie, scatter, heat maps, etc.) that users can interact with to explore data from different angles. All visualizations support drilling down, filtering, and exporting.\n\n2. Real-time Data Processing: Integration with various data sources to provide up-to-date information, with automatic refreshing and the ability to view historical trends.\n\n3. Customizable Reports: Users can create and save custom reports with specific metrics, visualizations, and filters. These reports can be scheduled for automatic generation and distribution via email.\n\n4. Advanced Analytics: Built-in statistical analysis tools including trend analysis, forecasting, and anomaly detection to help users identify patterns and outliers in their data.\n\n5. Role-based Access Control: Granular permissions system ensuring users only see the data relevant to their role, with administrative tools for managing user access.",
-      image: "/placeholder.svg?height=300&width=500",
-      category: "other",
-      technologies: ["Data Analysis", "Visualization", "Python", "Tableau", "D3.js", "React", "Flask", "Pandas"],
-      github: "https://github.com/muhamadsami23/data-dashboard",
-      demo: "https://data-dashboard.example.com",
-    },
+    // // Other Projects
+    // {
+    //   id: "project8",
+    //   title: "Data Analysis Dashboard",
+    //   description:
+    //     "Interactive data visualization dashboard for business analytics with real-time data processing and customizable reports.",
+    //   longDescription:
+    //     "This data analysis dashboard provides business users with powerful tools to visualize and analyze complex data sets without requiring technical expertise. The dashboard combines real-time data processing with intuitive visualization tools to help users make data-driven decisions quickly.\n\nKey features include:\n\n1. Interactive Visualizations: A variety of chart types (line, bar, pie, scatter, heat maps, etc.) that users can interact with to explore data from different angles. All visualizations support drilling down, filtering, and exporting.\n\n2. Real-time Data Processing: Integration with various data sources to provide up-to-date information, with automatic refreshing and the ability to view historical trends.\n\n3. Customizable Reports: Users can create and save custom reports with specific metrics, visualizations, and filters. These reports can be scheduled for automatic generation and distribution via email.\n\n4. Advanced Analytics: Built-in statistical analysis tools including trend analysis, forecasting, and anomaly detection to help users identify patterns and outliers in their data.\n\n5. Role-based Access Control: Granular permissions system ensuring users only see the data relevant to their role, with administrative tools for managing user access.",
+    //   image: "/placeholder.svg?height=300&width=500",
+    //   category: "other",
+    //   technologies: ["Data Analysis", "Visualization", "Python", "Tableau", "D3.js", "React", "Flask", "Pandas"],
+    //   github: "https://github.com/muhamadsami23/data-dashboard",
+    //   demo: "https://data-dashboard.example.com",
+    // },
   ]
 
   const filteredProjects =

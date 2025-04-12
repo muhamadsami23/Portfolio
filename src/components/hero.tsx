@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="space-y-4">
         <div>
           <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-500">
-            John Doe
+            Muhammad Sami
           </h1>
           <h2 className="text-xl text-gray-400">Software Engineer</h2>
         </div>

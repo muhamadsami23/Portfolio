@@ -130,7 +130,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* View All Projects Link */}
-        <motion.div
+        {/* <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ export default function ProjectsSection() {
               </span>
             </button>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

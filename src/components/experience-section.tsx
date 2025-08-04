@@ -14,7 +14,7 @@ interface Experience {
 export default function ExperienceSection() {
   const experiences: Experience[] = [
     {
-      title: "Flutter App Developer (Intern)",
+      title: "Flutter App Developer",
       company: "Al-Madinah Islamic Research Center",
       period: "May 2025 - Present",
       achievements: [

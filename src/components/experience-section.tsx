@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calendar, MapPin } from "lucide-react"
+import { Calendar } from "lucide-react"
 
 interface Experience {
   title: string
@@ -14,17 +14,6 @@ interface Experience {
 export default function ExperienceSection() {
   const experiences: Experience[] = [
     {
-      title: "Business Development Executive",
-      company: "1Click",
-      period: "Sep 2021 - Nov 2022",
-      achievements: [
-        "Maintained a 4.9-star rating on the Freelancer.com profile, ensuring high client satisfaction.",
-        "Closed 30-50 new projects per month, consistently meeting or exceeding company targets.",
-        "Acquired up to 40% new clients monthly."
-      ],
-      link: "https://1click.com.pk/"
-    },
-    {
       title: "Flutter App Developer (Intern)",
       company: "Al-Madinah Islamic Research Center",
       period: "May 2025 - Present",
@@ -35,7 +24,18 @@ export default function ExperienceSection() {
         "Ensuring secure storage and smooth offline performance."
       ],
       link: "https://mirc.org.pk/"
-    }
+    },
+    {
+      title: "Business Development Executive",
+      company: "1Click",
+      period: "Sep 2021 - Nov 2022",
+      achievements: [
+        "Maintained a 4.9-star rating on the Freelancer.com profile, ensuring high client satisfaction.",
+        "Closed 30-50 new projects per month, consistently meeting or exceeding company targets.",
+        "Acquired up to 40% new clients monthly."
+      ],
+      link: "https://1click.com.pk/"
+    },
   ]
 
   return (
@@ -57,7 +57,8 @@ export default function ExperienceSection() {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform md:translate-x-px"></div>
+          {/* Timeline vertical line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform -translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -69,9 +70,17 @@ export default function ExperienceSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 bg-teal-500 rounded-full transform -translate-x-1.5 md:-translate-x-2 mt-1.5"></div>
+                {/* Dot on timeline */}
+                <div className="absolute left-1/2 w-4 h-4 bg-teal-500 rounded-full transform -translate-x-1/2 mt-1.5"></div>
 
-                <div className="md:w-1/2 md:pr-12 ml-6 md:ml-0">
+                {/* Alternating side container */}
+                <div
+                  className={`md:w-1/2 p-4 ${
+                    index % 2 === 0
+                      ? "md:pr-12 md:ml-0 md:self-start"
+                      : "md:pl-12 md:ml-auto md:self-end"
+                  }`}
+                >
                   <div className="bg-zinc-800/50 p-6 rounded-lg border border-zinc-700 hover:border-teal-500/30 transition-colors">
                     <div className="flex flex-wrap justify-between items-start mb-4">
                       <h3 className="text-xl font-bold text-gray-200">{exp.title}</h3>
@@ -96,9 +105,15 @@ export default function ExperienceSection() {
                         </li>
                       ))}
                     </ul>
+
                     {exp.link && (
                       <div className="mt-4">
-                        <a href={exp.link} className="text-teal-400 hover:underline text-sm" target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={exp.link}
+                          className="text-teal-400 hover:underline text-sm"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           Visit Company Website
                         </a>
                       </div>

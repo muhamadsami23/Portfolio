@@ -23,6 +23,18 @@ export default function ExperienceSection() {
         "Acquired up to 40% new clients monthly."
       ],
       link: "https://1click.com.pk/"
+    },
+    {
+      title: "Flutter App Developer (Intern)",
+      company: "Al-Madinah Islamic Research Center",
+      period: "May 2025 - Present",
+      achievements: [
+        "Currently developing the Haji Helper app with real-time tracking and guidance features.",
+        "Working closely with backend and AI teams to integrate APIs and intelligent services.",
+        "Managing full-stack development with Flutter and GitHub version control.",
+        "Ensuring secure storage and smooth offline performance."
+      ],
+      link: "https://mirc.org.pk/"
     }
   ]
 
